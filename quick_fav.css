@@ -1,0 +1,38 @@
+.card .h-100 a {
+    position:relative;
+/*
+    display: flex !important;
+    flex-direction: row;
+*/
+}
+
+.quickFav {
+    display: none;
+    color: #ddd;
+    font-size: 20px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.4s ease;
+    border-radius: 0 0 0 15px;
+}
+
+.card:hover .quickFav{
+    display: block;
+    position:absolute;
+    top: 0;
+    right: 0;
+/*
+    transform: translateX(-45px);
+*/
+    transition: 0.4s ease;
+}
+
+.card .quickFav i:hover {
+    color: white;
+    transition: 0.4s ease;
+}
+
+.quickFav i {
+    margin: 10px;
+    cursor: pointer;
+}
