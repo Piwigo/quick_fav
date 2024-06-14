@@ -68,18 +68,9 @@ function qfav_init()
 {
   global $user;
 
-  // Add check if user uses Bootstrap darkromm or else deactivate
+  // Add check if user uses Bootstrap darkroom or else return
   if ('bootstrap_darkroom' != $user['theme'])
   {
-    global $page;
-    $plugin_id = 'quick_fav';
-
-    // Deactivate manually plugin from database
-    $query = 'UPDATE '.PLUGINS_TABLE.' SET state=\'inactive\' WHERE id=\''.$plugin_id.'\'';
-    pwg_query($query);
-
-    $page['warnings'][] = l10n('You need to be using Bootstrap Darkroom by default to use Quick fav');
-
     return;
   }
 
